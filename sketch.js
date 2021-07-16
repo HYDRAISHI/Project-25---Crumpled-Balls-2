@@ -16,13 +16,13 @@ function setup() {
 	engine = Engine.create();
 	world = engine.world;
 
-	rect1 = new Bin(800,390,100,20);
-	rect2 = new Bin(740,350,20,100);
-	rect3 = new Bin(860,350,20,100);
+	rect1 = new Bin(1000,350,100,20);
+	rect2 = new Bin(935,310,20,160);
+	rect3 = new Bin(1065,310,20,160);
 	paper = new Ball(150,200,70);
 	ground = new Ground(600,390,1200,20);
 	
-	bin = createSprite(800,370,40,40);
+	bin = createSprite(1000,310,40,40);
 	bin.addImage(binImage);
 	bin.scale = 0.5;
 	Engine.run(engine);
@@ -45,7 +45,7 @@ function draw() {
 function keyPressed(){
 	if (keyCode === UP_ARROW){
 
-      Matter.Body.applyForce(paper.body,paper.body.position,{x:230,y:-200});
+      Matter.Body.applyForce(paper.body,paper.body.position,{x:270,y:-250});
 
 	}
 }
